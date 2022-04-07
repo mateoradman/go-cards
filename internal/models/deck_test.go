@@ -4,7 +4,7 @@ import "testing"
 
 func TestNewCompleteDeck(t *testing.T) {
 	cards := GetAllCards()
-	deck  := Deck{}
+	deck := Deck{}
 	deck.NewDeck(cards)
 	if len(deck.Cards) != 48 {
 		t.Errorf("Expected len(deck.Cards) to be 48, got %d", len(deck.Cards))
@@ -13,20 +13,19 @@ func TestNewCompleteDeck(t *testing.T) {
 
 func TestNewCustomDeck(t *testing.T) {
 	cards := []Card{
-		Card{Value: "2", Suit: "SPADES"},
-		Card{Value: "6", Suit: "HEARTS"},
+		{Value: "2", Suit: "SPADES"},
+		{Value: "6", Suit: "HEARTS"},
 	}
-	deck  := Deck{}
+	deck := Deck{}
 	deck.NewDeck(cards)
 	if len(deck.Cards) != 2 {
 		t.Errorf("Expected len(deck.Cards) to be 2, got %d", len(deck.Cards))
 	}
 }
 
-
 func TestShuffle(t *testing.T) {
 	cards := GetAllCards()
-	deck  := Deck{}
+	deck := Deck{}
 	deck.NewDeck(cards)
 	deck.Shuffle()
 	if deck.Shuffled != true {

@@ -5,7 +5,6 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/mateoradman/go-cards/internal/models"
 )
 
 func main() {
