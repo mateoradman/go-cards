@@ -6,8 +6,8 @@ func TestNewCompleteDeck(t *testing.T) {
 	cards := GetAllCards()
 	deck := Deck{}
 	deck.NewDeck(cards)
-	if len(deck.Cards) != 48 {
-		t.Errorf("Expected len(deck.Cards) to be 48, got %d", len(deck.Cards))
+	if len(deck.Cards) != 52 {
+		t.Errorf("Expected len(deck.Cards) to be 52, got %d", len(deck.Cards))
 	}
 }
 

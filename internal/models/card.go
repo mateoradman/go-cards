@@ -1,6 +1,7 @@
 package models
 
 var CardsData = map[string]string{
+	"ACE":   "ACE",
 	"2":     "2",
 	"3":     "3",
 	"4":     "4",
@@ -10,9 +11,9 @@ var CardsData = map[string]string{
 	"8":     "8",
 	"9":     "9",
 	"10":    "10",
-	"JACK":  "J",
-	"QUEEN": "Q",
-	"KING":  "K",
+	"JACK":  "JACK",
+	"QUEEN": "QUEEN",
+	"KING":  "KING",
 }
 
 var Suits = map[string]string{

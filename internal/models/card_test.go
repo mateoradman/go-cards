@@ -18,7 +18,7 @@ func TestCard(t *testing.T) {
 
 func TestGetAllCards(t *testing.T) {
 	cards := GetAllCards()
-	if len(cards) != 48 {
-		t.Errorf("Expected len(cards) to be 48, got %d", len(cards))
+	if len(cards) != 52 {
+		t.Errorf("Expected len(cards) to be 52, got %d", len(cards))
 	}
 }
