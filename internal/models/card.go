@@ -38,11 +38,15 @@ func NewCard(value string, suit string) Card {
 }
 
 func GetAllCards() []Card {
+	// Keep track of the order of cards upon creation.
+	// by default the deck is sequential: spades followed by diamonds, clubs, then hearts.
+	suitsSortedKeys := []string{"S", "D", "C", "H"}
+	cardsDataSortedKeys := []string{"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "K", "Q", "A"}
+
 	var cards []Card
-	for value := range CardsData {
-		for suit := range Suits {
-			card := NewCard(value, suit)
-			cards = append(cards, card)
+	for _, suit := range suitsSortedKeys {
+		for _, value := range cardsDataSortedKeys {
+			cards = append(cards, NewCard(value, suit))
 		}
 	}
 	return cards
