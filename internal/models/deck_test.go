@@ -87,8 +87,8 @@ func TestDeckToJSON(t *testing.T) {
 func TestMinimalDeck(t *testing.T) {
 	deck := NewDeck(sampleCards)
 	minimalDeck := MinimalDeck{
-		Deck_ID: deck.Deck_ID,
-		Shuffled: deck.Shuffled,
+		Deck_ID:   deck.Deck_ID,
+		Shuffled:  deck.Shuffled,
 		Remaining: deck.Remaining,
 	}
 	json := minimalDeck.ToJSON()
