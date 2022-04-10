@@ -37,7 +37,6 @@ func CardExists(card Card, cards []Card) bool {
 	return false
 }
 
-
 type Deck struct {
 	Deck_ID   string `json:"deck_id"`   // Unique identifier for the deck
 	Shuffled  bool   `json:"shuffled"`  // Whether the deck has been shuffled
