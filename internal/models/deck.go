@@ -3,6 +3,7 @@ package models
 import (
 	"encoding/json"
 	"math/rand"
+	"time"
 
 	"github.com/google/uuid"
 )
@@ -53,6 +54,7 @@ func (d *Deck) ToJSON() []byte {
 }
 
 func (d *Deck) Shuffle() {
+	rand.Seed(time.Now().UnixNano())
 	for i := range d.Cards {
 		j := rand.Intn(i + 1)
 		d.Cards[i], d.Cards[j] = d.Cards[j], d.Cards[i]
